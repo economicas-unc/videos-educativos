@@ -1,6 +1,12 @@
 // Pure Vanilla TypeScript / JavaScript Application
 // Pre-producción Audiovisual Universitaria
 
+export interface VideoExample {
+  youtubeId: string;
+  title: string;
+  description?: string;
+}
+
 export interface VideoFormat {
   id: string;
   title: string;
@@ -12,8 +18,16 @@ export interface VideoFormat {
   visualSupports: string[];
   postProductionNeeds: string[];
   youtubeId: string;
+  videos?: VideoExample[];
   recommendedFor: string;
   preprodTips: string;
+}
+
+export function getFormatVideos(item: VideoFormat): VideoExample[] {
+  if (item.videos && item.videos.length > 0) {
+    return item.videos;
+  }
+  return [{ youtubeId: item.youtubeId, title: 'Ejemplo 1' }];
 }
 
 export const VISUAL_SUPPORTS_MAP: Record<string, { label: string; icon: string }> = {
@@ -46,6 +60,10 @@ export const FORMATS_DATA: VideoFormat[] = [
     visualSupports: ['presentacion-diapositivas', 'lectura-pdf'],
     postProductionNeeds: ['texto-imagenes'],
     youtubeId: '2561rT_Fbgc',
+    videos: [
+      { youtubeId: '2561rT_Fbgc', title: 'Ejemplo 1' },
+      { youtubeId: 'P1ryrfSe_4Y', title: 'Ejemplo 2' }
+    ],
     recommendedFor: 'Introducción a las Ciencias Sociales, Derecho, Humanidades, Introducciones a materias.',
     preprodTips: 'Diapositivas en formato 16:9, tipografía mínima de 28 pt, no saturar de texto (máximo 6 líneas).'
   },
@@ -60,11 +78,15 @@ export const FORMATS_DATA: VideoFormat[] = [
     visualSupports: ['pizarra'],
     postProductionNeeds: ['Ninguna'],
     youtubeId: 'WRibE2nt8wM',
+    videos: [
+      { youtubeId: 'WRibE2nt8wM', title: 'Ejemplo 1' },
+      { youtubeId: 'K_Kn_sGSDVA', title: 'Ejemplo 2' }
+    ],
     recommendedFor: 'Matemática, Física, Química, Estadística, Economía, Programación básica.',
     preprodTips: 'Tener resuelto el ejercicio previamente en borrador; definir colores de tinta por nivel de variable o paso lógico.'
   },
   {
-    id: 'tableta-resolucion-ejercicios',
+    id: 'papel-resolucion-ejercicios',
     title: 'Resolución de ejercicios a mano sobre papel',
     category: 'Práctico / Metodológico',
     duration: '6 a 10 min',
@@ -74,6 +96,9 @@ export const FORMATS_DATA: VideoFormat[] = [
     visualSupports: ['escritura-mano'],
     postProductionNeeds: ['texto-imagenes'],
     youtubeId: 'K_Kn_sGSDVA',
+    videos: [
+      { youtubeId: 'K_Kn_sGSDVA', title: 'Ejemplo 1' }
+    ],
     recommendedFor: 'Matemática, Estadística, Economía, Programación básica.',
     preprodTips: 'Tener resuelto el ejercicio previamente en borrador; definir colores de tinta por nivel de variable o paso lógico.'
   },
@@ -88,6 +113,9 @@ export const FORMATS_DATA: VideoFormat[] = [
     visualSupports: ['tablet'],
     postProductionNeeds: ['texto-imagenes'],
     youtubeId: 'YbKhyMbKSrQ',
+    videos: [
+      { youtubeId: 'YbKhyMbKSrQ', title: 'Ejemplo 1' }
+    ],
     recommendedFor: 'Matemática, Estadística, Economía, Programación básica.',
     preprodTips: 'Ejercitar la exposición con un esquema previo de lo que será dibujado o resaltado.'
   },
@@ -102,10 +130,13 @@ export const FORMATS_DATA: VideoFormat[] = [
     visualSupports: ['software-especifico', 'navegacion-web'],
     postProductionNeeds: ['texto-imagenes'],
     youtubeId: 'P1ryrfSe_4Y',
+    videos: [
+      { youtubeId: 'P1ryrfSe_4Y', title: 'Ejemplo 1' }
+    ],
     recommendedFor: 'Ingeniería, Ciencias Económicas, Biología, Arquitectura, Ciencias de la Computación.',
     preprodTips: 'Configurar la resolución de pantalla a 1920x1080; ampliar el tamaño del cursor del mouse y la tipografía de la interfaz.'
   },
- {
+  {
     id: 'mesa-redonda',
     title: 'Mesa redonda',
     category: 'Colaborativo / Reflexivo',
@@ -116,6 +147,10 @@ export const FORMATS_DATA: VideoFormat[] = [
     visualSupports: ['Ninguno'],
     postProductionNeeds: ['texto-imagenes'],
     youtubeId: 'lTYN09GcBhI',
+    videos: [
+      { youtubeId: 'lTYN09GcBhI', title: 'Ejemplo 1' },
+      { youtubeId: 'FYoh8AYAAw0', title: 'Ejemplo 2' }
+    ],
     recommendedFor: 'Seminarios de posgrado, Cátedras con profesores invitados, Formación profesional ética.',
     preprodTips: 'Preparar una presentación de cada participante. Tener un punteo de los temas a tratar. No pisarse al hablar.'
   },
@@ -130,6 +165,10 @@ export const FORMATS_DATA: VideoFormat[] = [
     visualSupports: ['Ninguno'],
     postProductionNeeds: ['texto-imagenes'],
     youtubeId: 'FYoh8AYAAw0',
+    videos: [
+      { youtubeId: 'FYoh8AYAAw0', title: 'Ejemplo 1' },
+      { youtubeId: 'lTYN09GcBhI', title: 'Ejemplo 2' }
+    ],
     recommendedFor: 'Seminarios de posgrado, Cátedras con profesores invitados, Formación profesional ética.',
     preprodTips: 'Enviar preguntas eje con anticipación al invitado; acordar un bloque temático no mayor a 15 minutos.'
   },
@@ -144,6 +183,9 @@ export const FORMATS_DATA: VideoFormat[] = [
     visualSupports: ['Ninguno'],
     postProductionNeeds: ['texto-imagenes', 'animaciones'],
     youtubeId: 'GuQlg3rCpTA',
+    videos: [
+      { youtubeId: 'GuQlg3rCpTA', title: 'Ejemplo 1' }
+    ],
     recommendedFor: '.',
     preprodTips: 'Se precisa un buen guión, con buena práctica y conocimiento preciso de las imágenes a utilizar en cada momento.'
   },
@@ -158,6 +200,9 @@ export const FORMATS_DATA: VideoFormat[] = [
     visualSupports: ['presentacion-diapositivas', 'visionado-videos'],
     postProductionNeeds: ['fondo-croma', 'animaciones', 'texto-imagenes'],
     youtubeId: 'vFlD5fEYVFg',
+    videos: [
+      { youtubeId: 'vFlD5fEYVFg', title: 'Ejemplo 1' }
+    ],
     recommendedFor: 'Medicina, Biología Celular, Geología, Física Teórica, Módulos introductorios masivos.',
     preprodTips: 'Formato reservado para situaciones especiales. Requiere alto trabajo de pre y postproducción.'
   },
@@ -308,12 +353,20 @@ function renderCatalog() {
       </span>`;
     }).join('');
 
+    const videos = getFormatVideos(item);
+    const multipleVideosBadge = videos.length > 1
+      ? `<span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-950/85 text-white shadow-sm backdrop-blur-sm border border-white/20 flex items-center gap-1.5">
+          <svg class="w-3 h-3 text-[#00B7CE]" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0013 8v4a1 1 0 001.553.894l3 2A1 1 0 0019 14V6a1 1 0 00-1.447-.894l-3 2z"/></svg>
+          ${videos.length} videos
+        </span>`
+      : '';
+
     return `
       <article class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col overflow-hidden group">
         <!-- Thumbnail Preview / Video Trigger -->
         <div class="relative bg-slate-900 aspect-video overflow-hidden group cursor-pointer" onclick="window.openVideoModal('${item.id}')">
           <img 
-            src="https://img.youtube.com/vi/${item.youtubeId}/hqdefault.jpg" 
+            src="https://img.youtube.com/vi/${videos[0].youtubeId}/hqdefault.jpg" 
             alt="Miniatura de ${item.title}"
             class="w-full h-full object-cover opacity-90 group-hover:scale-105 group-hover:opacity-100 transition-all duration-300"
             loading="lazy"
@@ -330,6 +383,13 @@ function renderCatalog() {
             </span>
           </div>
 
+          <!-- Multiple Videos Badge -->
+          ${videos.length > 1 ? `
+            <div class="absolute top-3 right-3 z-10">
+              ${multipleVideosBadge}
+            </div>
+          ` : ''}
+
           <!-- Play Button Overlay -->
           <div class="absolute inset-0 flex items-center justify-center">
             <div class="w-14 h-14 rounded-full bg-[#B5121B]/95 text-white flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:bg-[#B5121B] transition-all duration-200">
@@ -340,7 +400,7 @@ function renderCatalog() {
           </div>
 
           <div class="absolute bottom-3 left-3 right-3 text-white text-xs flex justify-between items-center z-10">
-            <span class="text-slate-200 font-medium">Hacé clic para reproducir ejemplo</span>
+            <span class="text-slate-200 font-medium">${videos.length > 1 ? `Ver ${videos.length} videos de ejemplo` : 'Hacé clic para reproducir ejemplo'}</span>
             <span class="border border-white/30 rounded px-1.5 py-0.5 text-[11px] bg-black/40">YouTube</span>
           </div>
         </div>
@@ -517,6 +577,9 @@ function initVideoModal() {
   const modal = document.getElementById('video-modal');
   const closeBtn = document.getElementById('modal-close-btn');
   const modalBackdrop = document.getElementById('modal-backdrop');
+  const selectorContainer = document.getElementById('modal-video-selector-container');
+  const tabsContainer = document.getElementById('modal-video-tabs');
+  const counterEl = document.getElementById('modal-video-counter');
 
   const closeModal = () => {
     if (!modal) return;
@@ -525,6 +588,12 @@ function initVideoModal() {
     const iframe = document.getElementById('modal-youtube-iframe') as HTMLIFrameElement | null;
     if (iframe) {
       iframe.src = ''; // stop playback
+    }
+    if (selectorContainer) {
+      selectorContainer.classList.add('hidden');
+    }
+    if (tabsContainer) {
+      tabsContainer.innerHTML = '';
     }
   };
 
@@ -550,9 +619,67 @@ function initVideoModal() {
     const tipsEl = document.getElementById('modal-tips');
     const reqBtn = document.getElementById('modal-request-btn');
 
-    if (iframe) {
-      iframe.src = `https://www.youtube.com/embed/${item.youtubeId}?autoplay=1&rel=0`;
+    const videos = getFormatVideos(item);
+    let activeVideoIdx = 0;
+
+    const loadVideo = (idx: number) => {
+      activeVideoIdx = idx;
+      const currentVideo = videos[idx] || videos[0];
+      if (iframe) {
+        iframe.src = `https://www.youtube.com/embed/${currentVideo.youtubeId}?autoplay=1&rel=0`;
+      }
+      renderTabs();
+    };
+
+    const renderTabs = () => {
+      if (!tabsContainer) return;
+      tabsContainer.innerHTML = videos.map((v, idx) => {
+        const isActive = idx === activeVideoIdx;
+        const baseClasses = "px-3.5 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all cursor-pointer";
+        if (isActive) {
+          return `
+            <button 
+              type="button" 
+              class="${baseClasses} bg-[#B5121B] text-white shadow-md shadow-[#B5121B]/40 ring-2 ring-white/30"
+              data-video-idx="${idx}"
+            >
+              <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+              <span>${v.title || `Ejemplo ${idx + 1}`}</span>
+            </button>
+          `;
+        } else {
+          return `
+            <button 
+              type="button" 
+              class="${baseClasses} bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700/80 hover:border-slate-500"
+              data-video-idx="${idx}"
+            >
+              <svg class="w-3 h-3 text-[#00B7CE] fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+              <span>${v.title || `Ejemplo ${idx + 1}`}</span>
+            </button>
+          `;
+        }
+      }).join('');
+
+      tabsContainer.querySelectorAll('button[data-video-idx]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetIdx = parseInt(btn.getAttribute('data-video-idx') || '0', 10);
+          loadVideo(targetIdx);
+        });
+      });
+    };
+
+    if (videos.length > 1) {
+      if (selectorContainer) selectorContainer.classList.remove('hidden');
+      if (counterEl) counterEl.textContent = `(${videos.length} videos disponibles)`;
+      renderTabs();
+    } else {
+      if (selectorContainer) selectorContainer.classList.add('hidden');
     }
+
+    loadVideo(0);
+
     if (titleEl) titleEl.textContent = item.title;
     if (descEl) descEl.textContent = item.description;
     if (badgeEl) badgeEl.textContent = `${item.category} • Duración recomendada: ${item.duration}`;

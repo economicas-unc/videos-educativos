@@ -55,14 +55,14 @@ export const FORMATS_DATA: VideoFormat[] = [
     category: 'Exposición ',
     duration: '8 a 12 min',
     complexity: 'Baja',
-    description: 'Grabación en estudio alternando planos del docente con diapositivas de alta legibilidad, esquemas sintéticos y palabras clave.',
-    pedagogicalRole: 'Acompaña la exposición con soportes visuales favoreciendo la comprensión de conceptos o procedimientos.',
+    description: 'Grabación en estudio alternando planos del docente con presentación de diapositivas.',
+    pedagogicalRole: 'Acompaña la exposición con soportes visuales que ayudan a la comprensión de conceptos o procedimientos.',
     visualSupports: ['presentacion-diapositivas', 'lectura-pdf'],
     postProductionNeeds: ['texto-imagenes'],
     youtubeId: '2561rT_Fbgc',
     videos: [
       { youtubeId: '2561rT_Fbgc', title: 'Ejemplo 1' },
-      { youtubeId: 'P1ryrfSe_4Y', title: 'Ejemplo 2' }
+      { youtubeId: 'GbCji__FGqg', title: 'Ejemplo 2' }
     ],
     recommendedFor: 'Introducción a las Ciencias Sociales, Derecho, Humanidades, Introducciones a materias.',
     preprodTips: 'Diapositivas en formato 16:9, tipografía mínima de 28 pt, no saturar de texto (máximo 6 líneas).'
@@ -75,19 +75,20 @@ export const FORMATS_DATA: VideoFormat[] = [
     complexity: 'Baja',
     description: 'El formato más similar a una clase presencial. Grabación de una exposición teórica y/o práctica frente a una pizarra. Puede ser en estudio de FyPE o un aula a convenir.',
     pedagogicalRole: 'Facilita seguir el razonamiento con soporte visual a medida. Se siente como estar en el aula presencial.',
-    visualSupports: ['pizarra'],
+    visualSupports: ['pizarra', 'escritura-mano'],
     postProductionNeeds: ['Ninguna'],
     youtubeId: 'WRibE2nt8wM',
     videos: [
-      { youtubeId: 'WRibE2nt8wM', title: 'Ejemplo 1' },
-      { youtubeId: 'K_Kn_sGSDVA', title: 'Ejemplo 2' }
+      { youtubeId: 'TLh_6G7i4_w', title: 'Ejemplo 1' },
+      { youtubeId: 'WRibE2nt8wM', title: 'Ejemplo 2' },
+      { youtubeId: 'V33U1OsFVnQ', title: 'Ejemplo 3' }
     ],
     recommendedFor: 'Matemática, Física, Química, Estadística, Economía, Programación básica.',
     preprodTips: 'Tener resuelto el ejercicio previamente en borrador; definir colores de tinta por nivel de variable o paso lógico.'
   },
   {
     id: 'papel-resolucion-ejercicios',
-    title: 'Resolución de ejercicios a mano sobre papel',
+    title: 'Exposición con papel u objetos físicos',
     category: 'Práctico / Metodológico',
     duration: '6 a 10 min',
     complexity: 'Baja',
@@ -97,31 +98,33 @@ export const FORMATS_DATA: VideoFormat[] = [
     postProductionNeeds: ['texto-imagenes'],
     youtubeId: 'K_Kn_sGSDVA',
     videos: [
-      { youtubeId: 'K_Kn_sGSDVA', title: 'Ejemplo 1' }
+      { youtubeId: 'K_Kn_sGSDVA', title: 'Ejemplo 1' },
+      { youtubeId: 'PZRI1IfStY0', title: 'Ejemplo 2' }
     ],
     recommendedFor: 'Matemática, Estadística, Economía, Programación básica.',
     preprodTips: 'Tener resuelto el ejercicio previamente en borrador; definir colores de tinta por nivel de variable o paso lógico.'
   },
   {
     id: 'tableta-resolucion-ejercicios',
-    title: 'Exposición o resolución de ejercicios con tablet',
+    title: 'Exposición con tablet',
     category: 'Práctico / Metodológico',
     duration: '6 a 10 min',
     complexity: 'Media',
     description: 'Grabación sincronizada del trazo manuscrito o zoom, resaltado o gestos en tableta digitalizadora.',
     pedagogicalRole: 'Facilita seguir el razonamiento siguiendo el foco en cada momento y a cada acción.',
-    visualSupports: ['tablet'],
+    visualSupports: ['tablet', 'escritura-mano', 'pizarra'],
     postProductionNeeds: ['texto-imagenes'],
     youtubeId: 'YbKhyMbKSrQ',
     videos: [
-      { youtubeId: 'YbKhyMbKSrQ', title: 'Ejemplo 1' }
+      { youtubeId: 'mFcrsmzlmfM', title: 'Ejemplo 1' },
+      { youtubeId: 'YbKhyMbKSrQ', title: 'Ejemplo 2' }
     ],
     recommendedFor: 'Matemática, Estadística, Economía, Programación básica.',
     preprodTips: 'Ejercitar la exposición con un esquema previo de lo que será dibujado o resaltado.'
   },
   {
     id: 'screencast-software-tecnico',
-    title: 'Demostración guiada de software especializado',
+    title: 'Demostración de software específico',
     category: 'Instrumental / Taller',
     duration: '7 a 12 min',
     complexity: 'Media',
@@ -131,28 +134,11 @@ export const FORMATS_DATA: VideoFormat[] = [
     postProductionNeeds: ['texto-imagenes'],
     youtubeId: 'P1ryrfSe_4Y',
     videos: [
-      { youtubeId: 'P1ryrfSe_4Y', title: 'Ejemplo 1' }
+      { youtubeId: 'P1ryrfSe_4Y', title: 'Ejemplo 1' },
+      { youtubeId: 'W6aOlSw3YXw', title: 'Ejemplo 2' }
     ],
     recommendedFor: 'Ingeniería, Ciencias Económicas, Biología, Arquitectura, Ciencias de la Computación.',
     preprodTips: 'Configurar la resolución de pantalla a 1920x1080; ampliar el tamaño del cursor del mouse y la tipografía de la interfaz.'
-  },
-  {
-    id: 'mesa-redonda',
-    title: 'Mesa redonda',
-    category: 'Colaborativo / Reflexivo',
-    duration: '15 a 30 min',
-    complexity: 'Media',
-    description: 'Conversación grupal a dos cámaras. Formato mesa radial o programa de streaming.',
-    pedagogicalRole: 'Contrasta posturas teóricas diversas, visibiliza proyectos de extensión/investigación y humaniza la labor científica.',
-    visualSupports: ['Ninguno'],
-    postProductionNeeds: ['texto-imagenes'],
-    youtubeId: 'lTYN09GcBhI',
-    videos: [
-      { youtubeId: 'lTYN09GcBhI', title: 'Ejemplo 1' },
-      { youtubeId: 'FYoh8AYAAw0', title: 'Ejemplo 2' }
-    ],
-    recommendedFor: 'Seminarios de posgrado, Cátedras con profesores invitados, Formación profesional ética.',
-    preprodTips: 'Preparar una presentación de cada participante. Tener un punteo de los temas a tratar. No pisarse al hablar.'
   },
   {
     id: 'entrevista-dialogo-academico',
@@ -167,14 +153,32 @@ export const FORMATS_DATA: VideoFormat[] = [
     youtubeId: 'FYoh8AYAAw0',
     videos: [
       { youtubeId: 'FYoh8AYAAw0', title: 'Ejemplo 1' },
-      { youtubeId: 'lTYN09GcBhI', title: 'Ejemplo 2' }
+      { youtubeId: 'ltlvBe6Gp5U', title: 'Ejemplo 2' }
     ],
     recommendedFor: 'Seminarios de posgrado, Cátedras con profesores invitados, Formación profesional ética.',
     preprodTips: 'Enviar preguntas eje con anticipación al invitado; acordar un bloque temático no mayor a 15 minutos.'
   },
   {
+    id: 'mesa-redonda',
+    title: 'Mesa redonda',
+    category: 'Colaborativo / Reflexivo',
+    duration: '15 a 30 min',
+    complexity: 'Media',
+    description: 'Conversación grupal a dos cámaras. Formato mesa radial o programa de streaming.',
+    pedagogicalRole: 'Contrasta posturas teóricas diversas, visibiliza proyectos de extensión/investigación y humaniza la labor científica.',
+    visualSupports: ['Ninguno'],
+    postProductionNeeds: ['texto-imagenes'],
+    youtubeId: 'lTYN09GcBhI',
+    videos: [
+      { youtubeId: 'lTYN09GcBhI', title: 'Ejemplo 1' },
+      { youtubeId: 'pBNC17FR68c', title: 'Ejemplo 2' }
+    ],
+    recommendedFor: 'Seminarios de posgrado, Cátedras con profesores invitados, Formación profesional ética.',
+    preprodTips: 'Preparar una presentación de cada participante. Tener un punteo de los temas a tratar. No pisarse al hablar.'
+  },
+  {
     id: 'explicacion-con-imagenes',
-    title: 'Ritmo ágil y descontracturado con imágenes estáticas',
+    title: 'Fondo luz de color con imágenes estáticas',
     category: 'Procesos / Conceptos',
     duration: '7 a 11 min',
     complexity: 'Alta',
@@ -191,7 +195,7 @@ export const FORMATS_DATA: VideoFormat[] = [
   },
   {
     id: 'pildora-croma-animaciones',
-    title: 'Desarrollo de conceptos complejos con fondo croma y animaciones',
+    title: 'Fondo artificial y animaciones',
     category: 'Impacto Conceptual',
     duration: '4 a 7 min',
     complexity: 'Alta',
@@ -201,7 +205,8 @@ export const FORMATS_DATA: VideoFormat[] = [
     postProductionNeeds: ['fondo-croma', 'animaciones', 'texto-imagenes'],
     youtubeId: 'vFlD5fEYVFg',
     videos: [
-      { youtubeId: 'vFlD5fEYVFg', title: 'Ejemplo 1' }
+      { youtubeId: 'vFlD5fEYVFg', title: 'Ejemplo 1' },
+      { youtubeId: '1_Bdu412gN4', title: 'Ejemplo 2' }
     ],
     recommendedFor: 'Medicina, Biología Celular, Geología, Física Teórica, Módulos introductorios masivos.',
     preprodTips: 'Formato reservado para situaciones especiales. Requiere alto trabajo de pre y postproducción.'
@@ -375,9 +380,9 @@ function renderCatalog() {
           
           <!-- Category & Complexity Pills -->
           <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
-            <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-white/95 text-slate-800 shadow-sm backdrop-blur-sm">
+            <!-- <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-white/95 text-slate-800 shadow-sm backdrop-blur-sm">
               ${item.category}
-            </span>
+            </span> -->
             <span class="px-2.5 py-1 rounded-full text-xs font-semibold shadow-sm backdrop-blur-sm ${complexityBadgeStyle}">
               ⏱ ${item.complexity}
             </span>
@@ -452,14 +457,14 @@ function renderCatalog() {
               <svg class="w-4 h-4 text-[#B5121B] fill-current" viewBox="0 0 24 24">
                 <path d="M10 8.64L15.27 12 10 15.36V8.64M8 5v14l11-7L8 5z"/>
               </svg>
-              Ver Ejemplo
+              Ver ejemplos
             </button>
             <button 
               type="button"
               onclick="window.selectFormatForProduction('${item.id}')"
               class="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#B5121B] hover:bg-[#910e15] text-white text-sm font-semibold shadow-sm transition-all hover:shadow"
             >
-              Solicitar Producción
+              Solicitar
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
               </svg>

@@ -65,7 +65,7 @@ export const FORMATS_DATA: VideoFormat[] = [
       { youtubeId: 'GbCji__FGqg', title: 'Ejemplo 2' }
     ],
     recommendedFor: 'Introducción a las Ciencias Sociales, Derecho, Humanidades, Introducciones a materias.',
-    preprodTips: 'Diapositivas en formato 16:9, tipografía mínima de 28 pt, no saturar de texto (máximo 6 líneas).'
+    preprodTips: 'Preparar las diapositivas con poco texto por placa, utilizar letra grande (28 px o mas), no repetir el texto de la diapositiva al hablar.'
   },
   {
     id: 'pizarra-resolucion-ejercicios',
@@ -84,7 +84,7 @@ export const FORMATS_DATA: VideoFormat[] = [
       { youtubeId: 'V33U1OsFVnQ', title: 'Ejemplo 3' }
     ],
     recommendedFor: 'Matemática, Física, Química, Estadística, Economía, Programación básica.',
-    preprodTips: 'Tener resuelto el ejercicio previamente en borrador; definir colores de tinta por nivel de variable o paso lógico.'
+    preprodTips: 'Procurar mirar a cámara .'
   },
   {
     id: 'papel-resolucion-ejercicios',
@@ -156,7 +156,7 @@ export const FORMATS_DATA: VideoFormat[] = [
       { youtubeId: 'ZoU0SnBVbZs', title: 'Ejemplo 2' }
     ],
     recommendedFor: 'Seminarios de posgrado, Cátedras con profesores invitados, Formación profesional ética.',
-    preprodTips: 'Enviar preguntas eje con anticipación al invitado; acordar un bloque temático no mayor a 15 minutos.'
+    preprodTips: 'Enviar preguntas eje con anticipación al invitado; si la entrevista es larga, acordar bloques temáticos.'
   },
   {
     id: 'mesa-redonda',
@@ -174,7 +174,7 @@ export const FORMATS_DATA: VideoFormat[] = [
       { youtubeId: 'pBNC17FR68c', title: 'Ejemplo 2' }
     ],
     recommendedFor: 'Seminarios de posgrado, Cátedras con profesores invitados, Formación profesional ética.',
-    preprodTips: 'Preparar una presentación de cada participante. Tener un punteo de los temas a tratar. No pisarse al hablar.'
+    preprodTips: 'Preparar una presentación (mini bio) de cada participante. Tener un punteo de los temas a tratar. No pisarse al hablar. Considerar no extenderse demasiado en el tiempo.'
   },
   {
     id: 'explicacion-con-imagenes',
@@ -182,7 +182,7 @@ export const FORMATS_DATA: VideoFormat[] = [
     category: 'Procesos / Conceptos',
     duration: '7 a 11 min',
     complexity: 'Alta',
-    description: 'Exposición cuidadosamente planificada y ensayada. Hay un uso',
+    description: 'Exposición cuidadosamente planificada y ensayada con soportes visuales que refuerzan o completan lo expuesto. Este formato, a diferencia de una presentación de diapositivas, es más dinámico pero a la vez requiere una mayor fluidez frente a cámara y un guión bien planificado',
     pedagogicalRole: 'Prepara a los alumnos para las prácticas presenciales, reduciendo errores operativos y garantizando bioseguridad.',
     visualSupports: ['Ninguno'],
     postProductionNeeds: ['texto-imagenes', 'animaciones'],
@@ -192,7 +192,7 @@ export const FORMATS_DATA: VideoFormat[] = [
       { youtubeId: 'sx1COxpd094', title: 'Ejemplo 12' }
     ],
     recommendedFor: '.',
-    preprodTips: 'Se precisa un buen guión, con buena práctica y conocimiento preciso de las imágenes a utilizar en cada momento.'
+    preprodTips: 'Se precisa un buen guión, práctica previa y conocimiento preciso de las imágenes a utilizar en cada momento.'
   },
   {
     id: 'pildora-croma-animaciones',

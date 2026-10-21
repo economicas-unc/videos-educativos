@@ -153,7 +153,7 @@ export const FORMATS_DATA: VideoFormat[] = [
     youtubeId: 'FYoh8AYAAw0',
     videos: [
       { youtubeId: 'FYoh8AYAAw0', title: 'Ejemplo 1' },
-      { youtubeId: 'ltlvBe6Gp5U', title: 'Ejemplo 2' }
+      { youtubeId: 'ZoU0SnBVbZs', title: 'Ejemplo 2' }
     ],
     recommendedFor: 'Seminarios de posgrado, Cátedras con profesores invitados, Formación profesional ética.',
     preprodTips: 'Enviar preguntas eje con anticipación al invitado; acordar un bloque temático no mayor a 15 minutos.'
@@ -178,17 +178,18 @@ export const FORMATS_DATA: VideoFormat[] = [
   },
   {
     id: 'explicacion-con-imagenes',
-    title: 'Fondo luz de color con imágenes estáticas',
+    title: 'Exposición dinámica con imágenes/videos de soporte',
     category: 'Procesos / Conceptos',
     duration: '7 a 11 min',
     complexity: 'Alta',
-    description: 'Registro audiovisual de procedimientos experimentales con planos detalle de instrumentos, manipulación de reactivos o maquinaria, señalización de normas de seguridad y cronómetros.',
+    description: 'Exposición cuidadosamente planificada y ensayada. Hay un uso',
     pedagogicalRole: 'Prepara a los alumnos para las prácticas presenciales, reduciendo errores operativos y garantizando bioseguridad.',
     visualSupports: ['Ninguno'],
     postProductionNeeds: ['texto-imagenes', 'animaciones'],
     youtubeId: 'GuQlg3rCpTA',
     videos: [
-      { youtubeId: 'GuQlg3rCpTA', title: 'Ejemplo 1' }
+      { youtubeId: 'GuQlg3rCpTA', title: 'Ejemplo 1' },
+      { youtubeId: 'sx1COxpd094', title: 'Ejemplo 12' }
     ],
     recommendedFor: '.',
     preprodTips: 'Se precisa un buen guión, con buena práctica y conocimiento preciso de las imágenes a utilizar en cada momento.'
